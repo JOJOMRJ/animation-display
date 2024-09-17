@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* 背景 */
+ 
+  body {
+    height:100vh;
+    background: url(../images/f1_1.jpg) no-repeat center 0;
+    background-size: cover;
+  }
+
+  /* cloud */
+  .cloud img {
+    position: absolute;
+    right: 50%;
+  }
+
+  .cloud img:nth-child(1) {
+    margin-right: 250px;
+    margin-top: 20px;
+    animation: cloud 1s infinite alternate linear;
+  }
+
+  .cloud img:nth-child(2) {
+    margin-right: -400px;
+    margin-top: 100px;
+    animation: cloud 1s infinite alternate linear 0.4s;
+  }
+
+  .cloud img:nth-child(3) {
+    margin-right: 550px;
+    margin-top: 200px;
+    animation: cloud 1s infinite alternate linear 0.8s;
+  }
+
+  @keyframes cloud {
+    100% {
+        transform: translate(20px)
+    }
+  }
+
+  /* text-pic */
+  .text-pic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    animation: textpic 1.5s;
+  }
+
+  @keyframes textpic{
+    0% {transform:translate(-50%,-50%) scale(1);}
+    20% {transform:translate(-50%,-50%) scale(0.1);}
+    50% {transform:translate(-50%,-50%) scale(1.5);}
+    80% {transform:translate(-50%,-50%) scale(0.8);}
+    100% {transform:translate(-50%,-50%) scale(1);}
+  }
+
+  /* balloon */
+  .balloon {
+    position: absolute;
+    left: 50%;
+  }
+
+  .balloon img {
+    margin-top: 250px;
+    margin-left: -500px;
+    animation: updown-move 2s infinite alternate;
+  }
+
+  @keyframes updown-move {
+    100% {
+        transform: translate(0, 30px);
+    }
+  }
+
+  /* point */
+  .point {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -100px);
+    display: flex;
+    width: 1600px;
+    justify-content: space-evenly;    
+  }
+
+  .point img:nth-child(1) {
+    animation: updown-move 0.8s infinite alternate;
+  }
+  .point img:nth-child(2) {
+    animation: updown-move 0.8s infinite alternate 0.2s;
+  }
+  .point img:nth-child(3) {
+    animation: updown-move 0.8s infinite alternate 0.4s;
+  }
+  .point img:nth-child(4) {
+    animation: updown-move 0.8s infinite alternate 0.6s;
+  }
